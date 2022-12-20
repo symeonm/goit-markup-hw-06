@@ -480,20 +480,31 @@
         <form name="user_data" class="user-data">
           <b class="form-title">Залиште свої дані, ми вам передзвонимо</b>
           <div class="data-form">
-            <label> Ім'я <input type="text" /> </label>
+            <label> Ім'я <input type="text" name="user-name" /> </label>
           </div>
           <div class="data-form">
-            <label> Телефон <input type="tel" /></label>
+            <label> Телефон <input type="tel" name="user-tel" /></label>
           </div>
           <div class="data-form">
-            <label> Пошта <input type="email" /></label>
+            <label> Пошта <input type="email" name="user-email" /></label>
           </div>
           <div class="data-form">
             <label for="">
               Коментар
-              <textarea name="feedback" id="" cols="30" rows="10"></textarea>
+              <textarea
+                name="feedback"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Введіть текст"
+              ></textarea>
             </label>
           </div>
+          <label for="" class="radio-button">
+            <input type="radio" /> Погоджуюся з розсилкою та приймаю
+            <a href="" class="link-contract"> Умови договору</a>
+          </label>
+          <button type="submit" class="submit-button">Відправити</button>
         </form>
       </div>
     </div>
