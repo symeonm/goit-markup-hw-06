@@ -466,6 +466,24 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe-email">
+          <form name="mailing-list" class="mailing-list">
+            <h3 class="subscribe-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h3>
+            <input
+              type="email"
+              name="user-email"
+              placeholder="E-mail"
+              class="input-email"
+            />
+
+            <button type="submit" class="button-subscribe">
+              Підписатися
+              <svg width="24px" height="24px" class="icon-send">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -480,13 +498,34 @@
         <form name="user_data" class="user-data">
           <b class="form-title">Залиште свої дані, ми вам передзвонимо</b>
           <div class="data-form">
-            <label> Ім'я <input type="text" name="user-name" /> </label>
+            <label>
+              Ім'я <input type="text" name="user-name" class="form-input" />
+              <span class="data-icon">
+                <svg width="18px" height="18px">
+                  <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+                </svg>
+              </span>
+            </label>
           </div>
           <div class="data-form">
-            <label> Телефон <input type="tel" name="user-tel" /></label>
+            <label>
+              Телефон <input type="tel" name="user-tel" class="form-input" />
+              <span class="data-icon">
+                <svg width="18px" height="18px">
+                  <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+                </svg>
+              </span>
+            </label>
           </div>
           <div class="data-form">
-            <label> Пошта <input type="email" name="user-email" /></label>
+            <label>
+              Пошта <input type="email" name="user-email" class="form-input" />
+              <span class="data-icon">
+                <svg width="18px" height="18px">
+                  <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+                </svg>
+              </span>
+            </label>
           </div>
           <div class="data-form">
             <label for="">
@@ -500,8 +539,11 @@
               ></textarea>
             </label>
           </div>
-          <label for="" class="radio-button">
-            <input type="radio" /> Погоджуюся з розсилкою та приймаю
+          <label class="checkbox-button">
+            <input type="checkbox" name="conract" class="checkbox" />
+            <span class="checkbox-icon"></span>
+
+            Погоджуюся з розсилкою та приймаю
             <a href="" class="link-contract"> Умови договору</a>
           </label>
           <button type="submit" class="submit-button">Відправити</button>

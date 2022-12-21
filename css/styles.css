@@ -512,7 +512,7 @@ h6 {
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.19;
+  line-height: 1.14;
   letter-spacing: 0.03em;
 }
 
@@ -544,6 +544,73 @@ h6 {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+
+.subscribe-email {
+  margin-left: 93px;
+}
+
+.mailing-list {
+  position: relative;
+  width: 570px;
+  height: 86px;
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.mailing-label {
+  position: absolute;
+}
+
+.input-email {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 16px;
+  outline: none;
+  color: #ffffff;
+
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: rgba(47, 48, 58, 1);
+}
+
+.button-subscribe {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 28px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+
+  width: 200px;
+  height: 50px;
+  background: var(--brand-color);
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.icon-send {
+  margin-left: 10px;
 }
 
 /* Portfolio.html */
@@ -640,7 +707,6 @@ h6 {
 }
 
 .portfolio-overlay {
-  content: "";
   position: absolute;
 
   top: 0;
@@ -657,7 +723,7 @@ h6 {
   height: 100%;
   transform: translateY(100%);
   transition-property: transform;
-  transition-duration: 250ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card:hover .portfolio-overlay {
@@ -726,12 +792,18 @@ h6 {
   position: absolute;
   top: 8px;
   right: 8px;
+  cursor: pointer;
 
   border: 0;
   padding: 0;
   width: auto;
   height: auto;
   background: #ffffff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover {
+  fill: var(--brand-color);
 }
 
 .user-data {
@@ -750,10 +822,12 @@ h6 {
 }
 
 .data-form {
+  position: relative;
   display: flex;
   color: #757575;
   flex-direction: column;
 
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -763,16 +837,27 @@ h6 {
   margin-bottom: 10px;
 }
 
-.data-form label {
-}
-
-.data-form input {
+.form-input {
   margin-top: 4px;
   width: 100%;
   height: 40px;
+  padding-left: 42px;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid;
+  border-color: rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .data-icon {
+  outline: none;
+  fill: var(--brand-color);
+}
+
+.form-input:focus {
+  outline: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: var(--brand-color);
 }
 
 .data-form textarea {
@@ -784,11 +869,27 @@ h6 {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.radio-button {
+textarea:focus {
+  outline: none;
+  border-color: var(--brand-color);
+}
+
+.data-icon {
+  position: absolute;
+  top: 28px;
+  left: 15px;
+  width: 18px;
+  height: 18px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-button {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
 
   font-weight: 400;
@@ -799,8 +900,29 @@ h6 {
   color: #757575;
 }
 
-.radio-button input {
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  border: 1.8px solid #212121;
+  border-radius: 2px;
   margin-right: 7px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--brand-color);
+
+  background-image: url(../images/icon\ check.svg);
+  background-size: contain;
+
+  background-origin: border-box;
 }
 
 .link-contract {
@@ -819,6 +941,7 @@ h6 {
   height: 50px;
   color: rgba(255, 255, 255, 1);
 
+  cursor: pointer;
   border: 0;
   padding: 10px 52px;
   background-color: var(--brand-color);
